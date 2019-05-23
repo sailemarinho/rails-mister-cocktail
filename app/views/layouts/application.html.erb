@@ -6,17 +6,24 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn.icon-icons.com/icons2/881/PNG/512/Cocktail_icon-icons.com_68766.png" />
+      </a>
+      <h3>Cocktails Paradise</h3>
+      <%= link_to "Mix new cocktail", new_cocktail_path, class: "btn btn-dark" %>
+    </div>
 
-
-
-
-  <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
-  <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag "application" %>
   </body>
 </html>
