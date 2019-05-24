@@ -1,14 +1,23 @@
-<h1><%= @cocktail.name  %></h1>
-    <%= image_tag @cocktail.photo.url, height: 300, width: 400 %>
-<br>
-<h4>Description</h4>
-  <% @cocktail.doses.each do |dose| %>
-    <%= dose.ingredient.name %>
-    <%= dose.description %>
-<% end %>
-<br>
-<br>
-<p>
-  <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
-</p>
+<div class="grid">
+<div class="section group">
+<div class="col col-3 card">
+  <div class="card-content">
+    <h1><%= @cocktail.name  %></h1>
+      <%= image_tag @cocktail.photo.url, height: 300, width: 400, class: "img" %>
+    <div class="card-description">
+      <h2>Details:</h2>
+      <ul><% @cocktail.doses.each do |dose| %>
+      <li><h4><%= dose.ingredient.name %></h4>
+      <p><%= dose.description %></p></li>
+        <% end %>
+    </ul>
+     <em><%= link_to "Pour a dose", new_cocktail_dose_path(@cocktail), class: "link_to" %></em>
+
+    </div>
+ </div>
+</div>
+</div>
+</div>
+
+
 

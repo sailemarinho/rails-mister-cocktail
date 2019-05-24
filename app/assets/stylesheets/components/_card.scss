@@ -1,7 +1,15 @@
+@mixin animate($sec : .3s){
+    transition: all $sec ease-in-out;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin: 20px;
+}
+
+#new_cocktail {
   margin: 20px;
 }
 
@@ -16,6 +24,23 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   @include animate();
+    &:hover{
+      -webkit-filter: grayscale(80%);
+      filter: grayscale(80%);
+      opacity: 0.8;
+  }
 }
+
+.card-name {
+  color: white;
+  text-decoration: none;
+  &:hover{
+  color: white;
+  text-decoration: none;
+  }
+}
+
+
