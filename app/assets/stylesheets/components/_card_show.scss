@@ -44,7 +44,6 @@ html {
     height: auto;
     opacity: 1;
     border-radius: 2px;
-    cursor: zoom-in;
     @include animate();
     &:hover{
       -webkit-filter: grayscale(80%);
