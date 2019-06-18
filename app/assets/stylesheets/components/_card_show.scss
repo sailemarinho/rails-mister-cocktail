@@ -77,8 +77,8 @@ html {
 
 .card-description{
   padding: 0.25rem 1rem;
-  height: 182px;
-  max-height: 182px;
+  height: 282px;
+  max-height: 282px;
   overflow: hidden;
   & h2{
     font-weight: 300;
@@ -96,6 +96,10 @@ html {
     font-size: 1em;
     line-height: 1.6;
     margin-bottom: .75rem;
+  }
+
+  & ul {
+    max-height: 174px;
   }
 }
 
