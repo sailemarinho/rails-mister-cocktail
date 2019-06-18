@@ -11,3 +11,44 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+body {
+  background: $grey;
+  font-family: 'Lato', sans-serif;
+  color: $text;
+  min-height: 100vh;
+  margin-bottom: 80px; /* margin bottom = footer height */
+}
+
+.container {
+  min-height: 100vh;
+}
+
+h1, h2 {
+  color: #FFA349;
+  font-weight: lighter;
+}
+
+.btn {
+  color: $orange;
+  opacity: 0.8;
+  border: 1px solid $orange;
+  border-radius: 25px;
+  &:hover{
+    opacity: 1;
+    background-color: white;
+    border: 1px solid $orange;
+    color: $orange;
+  }
+}
+
+.link_to {
+  color: $orange;
+  text-decoration: none;
+}
+
+.link_to:hover{
+  color: $orange;
+  text-decoration: none;
+}
